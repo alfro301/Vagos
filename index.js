@@ -1,8 +1,9 @@
-const { Client, Collection, MessageEmbed, WebhookClient, GuildMember, Message,  SlashCommandBuilder} = require("discord.js");
+const { Client, Collection, MessageEmbed, WebhookClient, GuildMember, Message,  SlashCommandBuilder} = require (`discord.js`);
 
 const client = new Client({
     intents: 32767,
 });
+
 module.exports = client;
 
 // Global Variables
@@ -18,5 +19,4 @@ client.on("ready", () =>{
 require("./handler")(client);
 
 
-
-client.login(token);
+client.login("MTA0MjUxNzc2ODU5Mjk1MzQxNA.GzcrKY.QDkZdjX6qAfVFp8KQgqjSfJQcCKqbHHRT8zOYg")
