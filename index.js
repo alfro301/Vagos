@@ -19,4 +19,4 @@ require("./handler")(client);
 
 
 
-client.login(process.env.token);
+client.login(token);
