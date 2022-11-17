@@ -3,13 +3,14 @@ const { Client, Collection, MessageEmbed, WebhookClient, GuildMember, Message,  
 const client = new Client({
     intents: 32767,
 });
-
+const token = require ("./config.json")
+client.login("MTA0MjUxNzc2ODU5Mjk1MzQxNA.GYnjdZ.EwDJDciDsAFmOqEjK0CwEcFmWcNDJ5PuS1_KGo")
 module.exports = client;
 
 // Global Variables
 client.commands = new Collection();
 client.slashCommands = new Collection();
-client.config = require("./config.json");
+
 client.on("ready", () =>{
     client.user.setActivity("VAGOS", {type:"PLAYING"})
 } )
@@ -19,4 +20,3 @@ client.on("ready", () =>{
 require("./handler")(client);
 
 
-client.login("MTA0MjUxNzc2ODU5Mjk1MzQxNA.GzcrKY.QDkZdjX6qAfVFp8KQgqjSfJQcCKqbHHRT8zOYg")
